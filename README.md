@@ -1,4 +1,4 @@
-# Project Title : Adaptive Scalping Parameter Optimization System
+# Project Title : Transformer-Based Follow-Through Prediction for Intraday Scalping
 
 This project is for the Capstone in the Applied Artificial Intelligence Program at the University of San Diego (USD). 
 

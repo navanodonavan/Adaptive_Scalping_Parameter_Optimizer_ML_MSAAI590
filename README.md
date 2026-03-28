@@ -51,7 +51,7 @@ Run the notebooks in this order:
 1. `0.1 EDA Feature Engineering.ipynb`
 2. `0.2 Self Supervised Transformer PreTrain.ipynb`
 3. `0.3 Transformer Fine Tuning.ipynb`
-4. `0.4 Model Evaluation and Trade Backtesting.ipynb`
+4. `0.4 Trade Backtesting with Model Predictions.ipynb`
 
 Stock OHLCV Data CSV files can be found in artifacts folder.
 

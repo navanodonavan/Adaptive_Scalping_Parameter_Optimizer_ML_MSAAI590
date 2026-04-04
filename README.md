@@ -6,7 +6,7 @@ The study focuses on five high-liquidity equities: TSLA, NVDA, COIN, OKLO, and P
 
 ## Repository Structure
 
-- **0.0 Stock Data Extraction.ipynb** – retrieves and consolidates 5-minute OHLCV data  
+- **0.0 Stock Data Extraction.ipynb** – retrieves 5-minute OHLCV data from Alpaca Markets (Historical Bars REST API)
 - **0.1 EDA Feature Engineering.ipynb** – performs exploratory analysis, builds intraday features, systematically identifies all VWAP Reclaim trade entries, and simulates Oracle hindsight best trade outcomes for all VWAP Reclaim setups.  
 - **0.2 Self Supervised Transformer PreTrain.ipynb** – pretrains the transformer on sequential market data  
 - **0.3 Transformer Fine Tuning.ipynb** – fine-tunes the encoder model for follow-through prediction, including training a classification head, and evaluates model predictions

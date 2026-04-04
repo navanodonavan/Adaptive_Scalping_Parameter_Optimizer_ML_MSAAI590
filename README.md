@@ -45,6 +45,9 @@ Instead of predicting whether price will go up or down, the model is designed to
 
 Model performance is evaluated from both a machine learning and trading perspective. In addition to prediction metrics, strategy performance is measured using cumulative profit and loss (P&L) through trade backtesting.
 
+<img width="1069" height="600" alt="image" src="https://github.com/user-attachments/assets/29dfe174-b411-49a0-9475-5125deaffc1b" />
+
+
 ## How to Run
 
 Run the notebooks in this order:

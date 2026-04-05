@@ -46,7 +46,7 @@ Encoder architecture:
 - Encoder Layers: 2
 - Feedforward Network: 256
 
-A transformer encoder is pretrained on the full set of unlabeled 5-minute price data. The input features consist of 16 engineered bar-level features capturing returns, volatility, VWAP relative positioning, candle structure, and time of day effects. During fine-tuning, encoder is adapted to a supervised classification task using two-phase training strategy. Phase 1, encoder is frozen and only classification head is trained on a higher learning rate (1e-3). Phase 2, encoder is unfrozen and entire model is trained using learning rate (1e-4).
+A transformer encoder is pretrained on the full set of unlabeled 5-minute price data. The input features consist of 16 engineered bar-level variables capturing returns, volatility, VWAP relative positioning, candle structure, and time of day effects. During fine-tuning, encoder is adapted to a supervised classification task using two-phase training strategy. Phase 1, encoder is frozen and only classification head is trained on a higher learning rate (1e-3). Phase 2, encoder is unfrozen and entire model is trained using learning rate (1e-4).
 
 ## Results
 

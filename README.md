@@ -40,7 +40,7 @@ The project centers on the **VWAP Reclaim Long** setup, where price reclaims VWA
 A transformer-based framework to predict whether VWAP reclaim setups are likely to produce meaningful follow-through or require more conservative management.
 
 Encoder architecture:
-- Sequence Length: 48 Bars
+- Sequence Length: 48 Bars (Each 5M price data = 1 bar)
 - Hidden Size: 64
 - Attention Heads: 4
 - Encoder Layers: 2

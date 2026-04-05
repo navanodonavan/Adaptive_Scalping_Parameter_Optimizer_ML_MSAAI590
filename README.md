@@ -1,8 +1,8 @@
 # Transformer-Based Follow-Through Prediction for Intraday Trading
 
-This project develops a transformer-based deep learning framework for predicting trade follow-through in intraday trading. Rather than forecasting price direction, the model estimates the probability that a trade setup will achieve meaningful follow-through after entry. The goal is to improve trade selection by filtering out lower-quality setups and supporting more consistent execution in rapidly changing market conditions.
+This project develops a transformer-based framework that learns temporal patterns in intraday price action to predict follow-through for a defined VWAP reclaim long trade setup. The problem is framed as a supervised classification task at the time of trade entry, emphasizing trade selection and execution quality rather than direct price prediction.
 
-The study focuses on five high-liquidity equities: TSLA, NVDA, COIN, OKLO, and PLTR. Using two years of 5-minute OHLCV data from Alpaca Markets, VWAP Reclaim Long opportunities were identified and labeled through forward trade simulation. A transformer model was then trained on recent intraday price and volume sequences to predict follow-through probability at the time of entry.
+Using two years of 5-minute data across COIN, NVDA, OKLO, PLTR, and TSLA, the pipeline engineers intraday features and pretrains a transformer encoder via masked reconstruction before fine-tuning it as a binary classifier. Rather than predicting overall market direction, the model focuses on improving trade management by identifying setups that justify extended holds versus short-term scalps.
 
 ## Repository Structure
 
@@ -37,9 +37,16 @@ The project centers on the **VWAP Reclaim Long** setup, where price reclaims VWA
 
 ## Model Approach
 
-The transformer model is trained on sequences of recent intraday price and volume features to predict the probability of trade follow-through at entry. This allows the model to capture temporal dependencies in price action leading up to each signal.
+A transformer-based framework to predict whether VWAP reclaim setups are likely to produce meaningful follow-through or require more conservative management.
 
-Instead of predicting whether price will go up or down, the model is designed to support **trade selection**, helping filter trades based on estimated quality.
+Encoder architecture:
+- Sequence Length: 48 Bars
+- Hidden Size: 64
+- Attention Heads: 4
+- Encoder Layers: 2
+- Feedforward Netwrk: 256
+
+A transformer encoder is pretrained on the full set of unlabeled 5-minute price data. The input features consist of 16 engineered bar-level features capturing returns, volatility, VWAP relative positioning, candle structure, and time of day effects. During fine-tuning, encoder is adapted to a supervised classification task using two-phase training strategy. Phase 1, encoder is frozen and only classification head is trained on a higher learning rate (1e-3). Phase 2, encoder is unfrozen and entire model is trained using learning rate (1e-4).
 
 ## Results
 

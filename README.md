@@ -52,7 +52,8 @@ A transformer encoder is pretrained on the full set of unlabeled 5-minute price 
 
 Model performance is evaluated from both a machine learning and trading perspective. In addition to prediction metrics, strategy performance is measured using cumulative profit and loss (P&L) through trade backtesting.
 
-<img width="1069" height="600" alt="image" src="https://github.com/user-attachments/assets/29dfe174-b411-49a0-9475-5125deaffc1b" />
+<img width="1170" height="664" alt="image" src="https://github.com/user-attachments/assets/f34ee086-e883-4218-bd13-cad10266e95b" />
+
 
 
 ## How to Run

@@ -77,3 +77,6 @@ Stock OHLCV Data CSV files can be found in artifacts folder.
 ## Disclaimer
 
 This project is for educational and research purposes only. It is not financial advice.
+
+## AI Usage Disclosure
+This project was developed with the assistance of [ChatGPT and Claude Code] to help with code generation and debugging. All AI-generated code was manually reviewed, tested, and added to Jupyter Notebooks by myself. 
